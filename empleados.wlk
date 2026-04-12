@@ -9,7 +9,7 @@ object gimenez {
         return fondoSueldos
     }
 }
-
+/*
 object galvan {
     var sueldo  = 15000
     var dinero = 0
@@ -39,6 +39,41 @@ object galvan {
             dinero = 0
             } else {
             dinero = dinero - cantidad
+        }
+    }
+}*/
+
+object galvan {
+    var sueldo =15000
+    var saldo = 0
+    method recibirSueldo(){
+            saldo = sueldo + saldo
+    }
+    method sueldo(_sueldo){
+        sueldo = _sueldo
+    }
+    method sueldo(){
+        return sueldo
+    }
+    method deuda(){
+        if (saldo > 0){
+            return 0
+        } else {
+            return saldo * (-1)
+        }
+    }
+    method dinero(){
+        if (saldo > 0){
+            return saldo
+        } else {
+            return 0
+        }
+    }
+    method gastar(cantidad){
+        if (cantidad > (saldo)){
+            saldo = saldo + cantidad * (-1)
+        }else{
+            saldo = cantidad + saldo
         }
     }
 }
