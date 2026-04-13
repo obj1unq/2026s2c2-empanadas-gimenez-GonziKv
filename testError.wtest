@@ -1,0 +1,16 @@
+import empleados.*^
+
+test "Test 1"{
+    galvan.sueldo(100000)
+    gimenez.pagarSueldo(galvan)
+    gimenez.pagarSueldo(galvan)
+    galvan.sueldo(200000)
+    assert.throwsException({(gimenez.pagarSueldo(galvan))})
+}
+test "Test 2"{
+    baigorria.vender(5000)
+    gimenez.pagarSueldo(baigorria)
+    baigorria.vender(10000)
+    baigorria.vender(20000)
+    assert.throwsException({(gimenez.pagarSueldo(baigorria))})  
+}

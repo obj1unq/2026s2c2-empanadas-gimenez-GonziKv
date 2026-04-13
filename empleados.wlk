@@ -2,11 +2,17 @@
 object gimenez {
     var fondoSueldos = 300000
     method pagarSueldo(empleado){
+        self.validarPago(empleado)
         fondoSueldos = fondoSueldos - empleado.sueldo()
         empleado.recibirSueldo()
     }
     method fondo(){
         return fondoSueldos
+    }
+    method validarPago(empleado){
+        if (fondoSueldos < empleado.sueldo()){
+            self.error("No se puede pagar al empleado")
+        }
     }
 }
 /*
