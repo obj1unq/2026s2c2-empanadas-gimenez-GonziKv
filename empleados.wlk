@@ -2,7 +2,7 @@
 object gimenez {
     var fondoSueldos = 300000
     method pagarSueldo(empleado){
-        validarPago(empleado)
+        self.validarPago(empleado)
         fondoSueldos = fondoSueldos - empleado.sueldo()
         empleado.recibirSueldo()
     }
