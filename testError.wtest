@@ -1,13 +1,13 @@
 import empleados.*^
 
-test "Test 1"{
+test "pagar a galvan con fondos insuficientes"{
     galvan.sueldo(100000)
     gimenez.pagarSueldo(galvan)
     gimenez.pagarSueldo(galvan)
     galvan.sueldo(200000)
     assert.throwsException({(gimenez.pagarSueldo(galvan))})
 }
-test "Test 2"{
+test "pagar a baigorria con fondos insuficientes"{
     baigorria.vender(5000)
     gimenez.pagarSueldo(baigorria)
     baigorria.vender(10000)
