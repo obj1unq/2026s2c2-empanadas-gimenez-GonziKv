@@ -1,4 +1,4 @@
-import empleados.*^
+import empleados.*
 
 test "pagar a galvan con fondos insuficientes"{
     galvan.sueldo(100000)
